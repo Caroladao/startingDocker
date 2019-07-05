@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build: 
+      context: ../ # Contexto do comando build
+      dockerfile: docker/Dockerfile
+    image: devmkt.azurecr.io/apis/test-node:latest
+    ports:
+    - "8888:8888"
+    volumes:
+    - .:/usr/app

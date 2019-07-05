@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  web:
+    image: node:10.5
+    ports:
+      - "8888:8888"
+    working_dir: /usr/src/app
+    command: npm start
+    volumes:
+      - type: 'bind'
+        source: ../
+        target: /usr/src/app
